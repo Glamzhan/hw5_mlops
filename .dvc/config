@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = C:\Users\Home\Desktop\mipt\MLOPS\HW5\dvc_storage
