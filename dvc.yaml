@@ -1,0 +1,22 @@
+﻿stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - src/prepare.py
+      - data/raw/data.csv
+    params:
+      - split_ratio
+      - random_state
+    outs:
+      - data/processed
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/processed
+    params:
+      - n_estimators
+      - random_state
+    outs:
+      - model.pkl
